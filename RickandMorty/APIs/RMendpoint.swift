@@ -8,7 +8,6 @@
 import Foundation
 
 /// won't receive any additional values (Unique)
-\
 @frozen enum RMendpoint: String  {
     /// endpoints to get the character info
     case character
