@@ -6,6 +6,9 @@
 //
 
 import Foundation
+
+/// Model of the Each location
+
 struct RM1Location:Codable{
     
     let name: String
