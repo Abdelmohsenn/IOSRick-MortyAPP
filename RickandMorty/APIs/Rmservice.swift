@@ -16,7 +16,7 @@ final class Rmservice{
         
     }
     
-    public func execute (_ request: RMrequest, completion: @escaping () ->Void){
+    public func execute (_ request: RMrequest, completion: @escaping (Result<String,Error>) ->Void){
         
         
     }

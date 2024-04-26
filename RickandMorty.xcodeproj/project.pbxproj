@@ -82,6 +82,7 @@
 		C9A427012BDC36AD006CDDA1 /* RickandMorty */ = {
 			isa = PBXGroup;
 			children = (
+				C9A4273C2BDC5FAF006CDDA1 /* App */,
 				C9A4271C2BDC39C4006CDDA1 /* Resources */,
 				C9A4271B2BDC39BE006CDDA1 /* Managers */,
 				C9A4271A2BDC39AC006CDDA1 /* APIs */,
@@ -89,8 +90,6 @@
 				C9A427182BDC398C006CDDA1 /* ViewModels */,
 				C9A427172BDC3986006CDDA1 /* Views */,
 				C9A427162BDC397B006CDDA1 /* Models */,
-				C9A427022BDC36AD006CDDA1 /* AppDelegate.swift */,
-				C9A427042BDC36AD006CDDA1 /* SceneDelegate.swift */,
 				C9A427082BDC36AD006CDDA1 /* Main.storyboard */,
 				C9A4270B2BDC36B0006CDDA1 /* Assets.xcassets */,
 				C9A4270D2BDC36B0006CDDA1 /* LaunchScreen.storyboard */,
@@ -168,6 +167,15 @@
 				C9A4272C2BDC3BDC006CDDA1 /* RMLocationViewController.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		C9A4273C2BDC5FAF006CDDA1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C9A427022BDC36AD006CDDA1 /* AppDelegate.swift */,
+				C9A427042BDC36AD006CDDA1 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
