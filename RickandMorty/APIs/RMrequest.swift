@@ -52,6 +52,7 @@ final class RMrequest{
     }
     ///get for http request
      public let httpmethod = "GET"
+    
      init(endpts: RMendpoint, pathcomps: Set<String>, queryparameters: [URLQueryItem]) {
         self.endpts = endpts
         self.pathcomps = pathcomps

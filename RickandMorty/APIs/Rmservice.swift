@@ -11,6 +11,8 @@ import Foundation
 final class Rmservice{
     /// Shared instance (singleton)
     static let shared = Rmservice()
+    
+    ///enum for different error types
     enum error:Error{
         case FailedError
         case FailedData
@@ -35,14 +37,14 @@ final class Rmservice{
                 print(String(describing: json))
             } catch
             {
-                completion(.failure(err!))
+                completion(.failure(error))
                 
             }
         }
         task.resume()
     }
     
-    
+    /// Performing the Http reqiest using GET initialized as puplic let GET in the RMrequest
     private func request(from Rmrequest:RMrequest) ->URLRequest?{
         guard let urlpassed = Rmrequest.urlpassed else {return nil}
         var request = URLRequest(url: urlpassed)
