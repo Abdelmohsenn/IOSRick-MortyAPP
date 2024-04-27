@@ -16,11 +16,23 @@ class RMCharViewController: UIViewController {
         }
         title = "Characters"
         guard let rand = x.randomElement() else{ return }
-        let request = RMrequest(endpts: .character, pathcomps: [rand], queryparameters: [
+        let request = RMrequest(endpts: .character, pathcomps: [], queryparameters: [
             ]
         )
         
-        print(request.urlpassed)
+    
+        
+        print(request.urlpassed!)
+        Rmservice.shared.execute(request, expecting: RMCharacters.self){
+            result in
+            switch result{
+                
+            case .success:
+                break
+            case .failure(let error):
+                print(String(describing: error))
+            }
+        }
     }
     
     
