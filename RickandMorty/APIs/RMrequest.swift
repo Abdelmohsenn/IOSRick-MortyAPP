@@ -9,11 +9,11 @@ import Foundation
 
 /// Requests from the API
 final class RMrequest{
-    /// Endpoint
+    /// Endpoint => character, loc, episodes
     private let endpts : RMendpoint
-     /// comp
-    private let pathcomps : [String]
-     /// Query
+     /// pathcomp
+    private let pathcomps : Set<String>
+     /// Query args
     private let queryparameters : [URLQueryItem]
     
     public var  urlpassed : URL? {
@@ -24,16 +24,21 @@ final class RMrequest{
         static let baseurl = "https://rickandmortyapi.com/api"
     }
     
+    /// string formulation for pathcomps
+
     private var urlstring : String {
         var string = consts.baseurl
         string += "/"
         string += endpts.rawValue
+        
         if !pathcomps.isEmpty{
             pathcomps.forEach({
                 string += "/\($0)"
             })
             
         }
+        
+        /// string formulation for args
         
         if !queryparameters.isEmpty{
            string += "?"
@@ -45,8 +50,9 @@ final class RMrequest{
         }
         return string
     }
-    
-     init(endpts: RMendpoint, pathcomps: [String], queryparameters: [URLQueryItem]) {
+    ///get for http request
+     let httpmethod = "GET"
+     init(endpts: RMendpoint, pathcomps: Set<String>, queryparameters: [URLQueryItem]) {
         self.endpts = endpts
         self.pathcomps = pathcomps
         self.queryparameters = queryparameters
